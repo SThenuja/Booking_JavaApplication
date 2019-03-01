@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="customer_report" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="07d4368b-6bcb-4993-ae2b-10db5353f865">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT `CustomerID`, `Name`, `Gender`, `Address`, `Email`, `ContactNo`FROM `customer` WHERE `status`=1]]>
+	</queryString>
+	<field name="CustomerID" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Gender" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Address" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="ContactNo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="211" y="0" width="188" height="23" uuid="d122a2f3-a04f-4b90-ad48-bdfb3ea48a90"/>
+				<textElement>
+					<font fontName="Algerian" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Customer Details]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="79" height="20" uuid="c024c265-a221-4131-95a8-cc1dccafae0b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CustomerID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="96" y="0" width="63" height="20" uuid="adb421a7-9f4a-4bb4-a5ba-2b79573408a0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="0" width="65" height="20" uuid="b4b397ca-bcae-43b7-b53c-e57f6062e340"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="399" y="0" width="55" height="20" uuid="925f2fd9-b79e-4a9a-8ddb-ea646f59739e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="506" y="0" width="66" height="20" uuid="0e56067b-a875-4e3f-959d-6b1c4664f6d6"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ContactNo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="194" y="0" width="59" height="20" uuid="5204d95b-34ff-4ea6-a1c3-7380f90f1737"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="79" height="20" uuid="6a44bde3-5c59-4d15-8dcc-e8a1f77b9dfc"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CustomerID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="96" y="0" width="63" height="20" uuid="2a2c5e89-7481-443f-b848-32c25c1c723e"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="194" y="0" width="59" height="20" uuid="ac377b09-bd9a-499a-a917-4ea672b11cfb"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="292" y="0" width="65" height="20" uuid="4359528b-e369-4e58-88e4-13ef1ffc2fd4"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="399" y="0" width="55" height="20" uuid="75de9684-b7b4-4de0-8071-3d26668b2798"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="506" y="0" width="65" height="20" uuid="8fcd742c-5e3e-464f-96c8-d5680294924c"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ContactNo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="18" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

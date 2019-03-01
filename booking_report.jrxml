@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="booking_report" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="131ce090-a97d-4b3f-b0eb-f81fe8fd8e9a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT `BookingID`, `CustomerName`, `NIC`, `Hall`, `StartDate`, `EndDate`, `Place` FROM `booking` WHERE `status`=1]]>
+	</queryString>
+	<field name="BookingID" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="CustomerName" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="NIC" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Hall" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="StartDate" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="EndDate" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Place" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="198" y="0" width="176" height="20" uuid="45fbdde9-c334-475f-bbef-7fa0597be283"/>
+				<textElement>
+					<font fontName="Algerian" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Booking Details]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="0" y="0" width="100" height="20" uuid="ebc16af3-ac19-477b-9c77-b2d7dd54406a"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="9" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="51" height="20" uuid="399377fc-6442-4f7f-936c-5441d21ad81b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BookingID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="65" y="0" width="75" height="20" uuid="da8ab35a-b708-4504-ace8-a3db59004cbd"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CustomerName]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="0" width="32" height="20" uuid="3cc175e2-18da-4213-862f-319a52e648f0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIC]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="254" y="0" width="41" height="20" uuid="fdb9e66d-65bd-4d9c-8185-9cafdddf1419"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hall]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="0" width="64" height="20" uuid="f76af81d-942d-49d6-bec4-51a15b9087dc"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[StartDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="60" height="20" uuid="dd2d56b3-0c85-47e0-b7ae-190d1b2d7727"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[EndDate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="477" y="0" width="56" height="20" uuid="d5970ba6-db77-48bc-85a3-3c725ecc937f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Place]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="51" height="20" uuid="74c4156b-6488-4d99-b5ff-7ef83888f8a2"/>
+				<textFieldExpression><![CDATA[$F{BookingID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="65" y="0" width="75" height="20" uuid="9f595e29-28e0-4c43-997a-6345fed1edc6"/>
+				<textFieldExpression><![CDATA[$F{CustomerName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="166" y="0" width="72" height="20" uuid="e3847f93-c0fe-4d8a-836c-bf5e60cf0cea"/>
+				<textFieldExpression><![CDATA[$F{NIC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="254" y="0" width="41" height="20" uuid="dfd65fe4-419c-4c7d-ad6e-895d5cbe4437"/>
+				<textFieldExpression><![CDATA[$F{Hall}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="0" width="51" height="20" uuid="28195dd4-12bf-46e6-b037-2cc95aedea98"/>
+				<textFieldExpression><![CDATA[$F{StartDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="49" height="20" uuid="be77fdaa-b9b5-4186-b07d-305477139739"/>
+				<textFieldExpression><![CDATA[$F{EndDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="477" y="0" width="78" height="20" uuid="e8e60637-859a-4132-9170-c0bc79095d8b"/>
+				<textFieldExpression><![CDATA[$F{Place}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField evaluationTime="Report">
+				<reportElement x="238" y="21" width="100" height="20" uuid="705f770d-9870-464a-aedf-fa4116d90936"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
